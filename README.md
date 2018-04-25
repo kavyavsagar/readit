@@ -8,17 +8,21 @@ They are the scaffold generator, building a MVC without scaffold, setting up the
 You can install, setup and run this project via local development server using commands are mentioned below :
 
 <h3>Installation</h3>
-Download the app from this repo and execute the following command
+Download the app from this repo
+
 <pre>## Move into the application dir
 cd readit
 $ bundle install</pre>
-
-<h3>Generating new app</h3>
-<pre>ng new base-converter</pre>
 
 <h3>Create DB & Tables</h3>
 <pre>##  create DB
 $ rake db:create
 
-##  create Table
+##  create Tables
 $ rake db:migrate </pre>
+
+<h3>Run app</h3>
+<pre>
+$ rails s
+</pre>
+NOTE :- Please run the mysql server also. 
