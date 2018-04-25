@@ -25,5 +25,7 @@ $ rake db:migrate </pre>
 <h3>Run app</h3>
 <pre>
 $ rails s
+## Navigate to http://localhost:3000/
 </pre>
+
 NOTE :- Please run the mysql server also. 
