@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'search/index'
+
  # get 'sessions/new'
  # get 'sessions/create'
  # get 'sessions/destroy'

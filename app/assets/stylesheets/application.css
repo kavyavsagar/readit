@@ -18,8 +18,9 @@
 }
 body{
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
-ul {
+ul.menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -28,7 +29,7 @@ ul {
     position: fixed; 
     overflow: auto;
 }
-li a {
+.menu > li a {
     display: block;
     color: #333;
     padding: 8px 16px;
@@ -37,14 +38,14 @@ li a {
     font-weight: 600;
 }
 
-li a.active {
+.menu > li a.active {
     background-color: #88aa31;
     color: white !important;
 }
-li a:visited {
+.menu > li a:visited {
 	 color: #333;
 }
-li a:hover:not(.active) {
+.menu > li a:hover:not(.active) {
     background-color: #555;
     color: white;
 }
@@ -198,4 +199,50 @@ a:hover, a:focus{
     width: 100%;   
     height: 100px;
     border-color: #C04848;
+}
+/** Search Box */
+.card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-top: 20px;
+    width: 83%;
+    margin-bottom: 25px;
+}
+
+.card h3{
+    border-bottom: 1px solid #e1e1e1;
+    margin: 0;
+    padding-bottom: 15px;
+}
+
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+
+}
+.input-group .form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background: #fff;
+}
+.input-group-btn {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    width: 1%;
+    vertical-align: middle;
+}
+input[type=submit].btn{
+
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.input-group .form-control,  .input-group-btn {
+    display: table-cell;
 }

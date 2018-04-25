@@ -1,0 +1,25 @@
+// Place all the styles related to the search controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.list-content {
+	list-style-type: none;
+	width: 90%;
+
+	span{
+		color: #999;
+	}
+	h4{
+		margin-bottom: 0;
+	}
+
+	li {
+	  padding: 10px;
+	  overflow: auto;
+	}
+
+	li:hover {
+	  background: #f1f1f1;
+	  cursor: pointer;
+	}
+}

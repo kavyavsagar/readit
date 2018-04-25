@@ -1,0 +1,17 @@
+<% provide(:title, "Search Result")%>
+<p id="notice"><%= notice %></p>
+
+<h1>Search Result</h1>
+
+<ul class="list-content">
+	<% if @search_res.present? %>
+	<% @search_res.each do |res| %>    
+		<li><h4><%= res.title %></h4>
+			<p><%= res.post %></p>
+			<p><span><%= res.created_at.strftime("%b %d, %Y %H:%M:%S") %></span> | <%= link_to 'View', res %></p>
+		</li>		
+	<% end %>
+	<% else %>
+		<li>No result found !</li>
+	<% end %>
+</ul>
