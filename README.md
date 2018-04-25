@@ -17,7 +17,6 @@ $ bundle install</pre>
 <h3>Create DB & Tables</h3>
 <pre>##  create DB
 $ rake db:create
-
 ##  create Tables
 $ rake db:migrate </pre>
 
