@@ -1,10 +1,10 @@
 == READID BLOG
 
-I have build up a Rails blog app which cover numerous functionalities. 
+I have build up a Rails blog app which cover numerous functionalities. The basic authentication of user can be managed with session. Also provide seperate privilages for user and admin.
 
 They are the scaffold generator, building a MVC without scaffold, setting up the database, model, views, controller, partials, CRUD, routes, before_action, validates, belongs_to, has_many, foreign keys, fixing errors, styling with SASS, search module, authentication, admin panel etc.
 
-<h3>Installation</h3>
+## Installation
 Download the app from this repo and execute the following command
 <pre>
 ## Move into the application dir
@@ -12,7 +12,7 @@ cd readit
 $ bundle install
 </pre>
 
-<h3>Create DB & Tables</h3>
+## Create DB & Tables
 <pre>
 ##  create DB
 $ rake db:create
