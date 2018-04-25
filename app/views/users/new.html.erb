@@ -1,0 +1,6 @@
+<% provide(:title, "Add new user")%>
+<h1>Signup User</h1>
+
+<%= render 'form' %>
+
+<% if session[:is_admin] %> <%= link_to 'Back', users_path %> <% end %>

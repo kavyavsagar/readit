@@ -1,0 +1,53 @@
+<% provide(:title, "View article")%>
+<div class="block">
+
+<p id="notice"><%= notice %></p>
+<p>
+  <h2><%= @article.title %></h2><br>
+  <%= @article.post %><br>
+  
+ <strong>By : </strong> <span class="text-mute"><%= @user.email %></span>&nbsp;&nbsp;|&nbsp;&nbsp;<strong>Created : </strong> <span class="text-mute"><%= @article.created_at.strftime("%b %d, %Y %H:%M:%S") %></span>
+</p>
+
+<hr><br>
+<h2>Comments</h2>
+<% @article.comments.each do |comment| %>
+
+<p><b> <%= comment.commenter %></b><br>
+<%= comment.content %><br>
+<%= comment.created_at.strftime("%b %d, %Y %H:%M:%S") %> 	
+</p>
+<% if session[:user_id] %>
+<p><%= link_to "Delete", [comment.article, comment], method: :delete, data: { confirm: "Are you sure?" } %></p>
+<% end %>
+<hr class="divider-comment">
+<% end %>
+<br>
+
+<h2>Add Comment</h2><br>
+<div class="form-control">
+<% if flash %>
+  <% flash.each do |name, message| %>
+    <div class="notice"><%= message.html_safe %></div>
+  <% end %>  
+<% end %>
+
+ <%= form_for([@article, @article.comments.build]) do |f| %>
+
+ <p>
+	 <%= f.label :commenter %><br>
+	 <%= f.text_field :commenter %>
+ </p>
+
+ <p>
+	 <%= f.label :content %> <br>
+	 <%= f.text_area :content %> 
+ </p>
+ <p><%= f.submit %></p>
+ 
+ <% end %>
+</div>
+
+</div>
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>

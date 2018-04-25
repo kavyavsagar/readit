@@ -1,0 +1,30 @@
+<% provide(:title, "Login") %>
+<div class="content">
+<h1>Login</h1>
+<% if flash %>
+  <% flash.each do |name, message| %>
+    <p class="notice"><%= message %></p>
+  <% end %>
+<% end %>
+  
+<div class="form-control">
+  <%= form_tag do %>
+    
+  <div class="group wat-cf">
+    <div class="left">
+      <%= label_tag :email, 'Email:' %>
+    </div>
+    <div class="right">
+    <%= text_field_tag :email, params[:email] %>
+    </div>
+  </div>
+  <div class="group wat-cf">
+    <div class="left"><%= label_tag :password, 'Password:' %></div>
+    <div class="right"><%= password_field_tag :password, params[:password] %></div>
+  </div>
+  <div class="group wat-cf">
+    <div class="right"><div class="button"><%= submit_tag "Login" %></div></div>
+  </div>
+  <% end %>
+</div>
+</div>
